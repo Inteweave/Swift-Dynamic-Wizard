@@ -7,14 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B2BF1BE622E7BF3A005535C4 /* TwoButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BF1BE422E7BF3A005535C4 /* TwoButtonViewController.swift */; };
+		B2BF1BE722E7BF3A005535C4 /* TwoButtonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2BF1BE522E7BF3A005535C4 /* TwoButtonViewController.xib */; };
+		B2BF1BE922E7BF4E005535C4 /* TwoButtonCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BF1BE822E7BF4E005535C4 /* TwoButtonCoordinator.swift */; };
+		B2BF1BEB22E7BF7F005535C4 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BF1BEA22E7BF7F005535C4 /* Coordinator.swift */; };
 		B2CD21F722E7AD5600EA7BA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CD21F622E7AD5600EA7BA5 /* AppDelegate.swift */; };
 		B2CD21F922E7AD5600EA7BA5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CD21F822E7AD5600EA7BA5 /* ViewController.swift */; };
 		B2CD21FC22E7AD5600EA7BA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2CD21FA22E7AD5600EA7BA5 /* Main.storyboard */; };
 		B2CD21FE22E7AD5700EA7BA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2CD21FD22E7AD5700EA7BA5 /* Assets.xcassets */; };
 		B2CD220122E7AD5700EA7BA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2CD21FF22E7AD5700EA7BA5 /* LaunchScreen.storyboard */; };
+		B2CD220E22E7ADB500EA7BA5 /* WizardError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CD220B22E7ADB400EA7BA5 /* WizardError.swift */; };
+		B2CD220F22E7ADB500EA7BA5 /* Wizard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CD220C22E7ADB400EA7BA5 /* Wizard.swift */; };
+		B2CD221022E7ADB500EA7BA5 /* ScreenNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CD220D22E7ADB400EA7BA5 /* ScreenNavigation.swift */; };
+		B2CD221422E7AE3200EA7BA5 /* Snacks.json in Resources */ = {isa = PBXBuildFile; fileRef = B2CD221322E7AE3200EA7BA5 /* Snacks.json */; };
+		B2CD221622E7B1E600EA7BA5 /* JSONWizard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CD221522E7B1E600EA7BA5 /* JSONWizard.swift */; };
+		B2CD221F22E7B74600EA7BA5 /* Dynamic_Wizard_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CD221E22E7B74600EA7BA5 /* Dynamic_Wizard_Tests.swift */; };
+		B2CD222622E7B74C00EA7BA5 /* Snacks.json in Resources */ = {isa = PBXBuildFile; fileRef = B2CD221322E7AE3200EA7BA5 /* Snacks.json */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		B2CD222122E7B74600EA7BA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B2CD21EB22E7AD5600EA7BA5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B2CD21F222E7AD5600EA7BA5;
+			remoteInfo = "Dynamic Wizard";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		B2BF1BE422E7BF3A005535C4 /* TwoButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoButtonViewController.swift; sourceTree = "<group>"; };
+		B2BF1BE522E7BF3A005535C4 /* TwoButtonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TwoButtonViewController.xib; sourceTree = "<group>"; };
+		B2BF1BE822E7BF4E005535C4 /* TwoButtonCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoButtonCoordinator.swift; sourceTree = "<group>"; };
+		B2BF1BEA22E7BF7F005535C4 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		B2CD21F322E7AD5600EA7BA5 /* Dynamic Wizard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dynamic Wizard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2CD21F622E7AD5600EA7BA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2CD21F822E7AD5600EA7BA5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +47,14 @@
 		B2CD21FD22E7AD5700EA7BA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2CD220022E7AD5700EA7BA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B2CD220222E7AD5700EA7BA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2CD220B22E7ADB400EA7BA5 /* WizardError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WizardError.swift; sourceTree = "<group>"; };
+		B2CD220C22E7ADB400EA7BA5 /* Wizard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wizard.swift; sourceTree = "<group>"; };
+		B2CD220D22E7ADB400EA7BA5 /* ScreenNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenNavigation.swift; sourceTree = "<group>"; };
+		B2CD221322E7AE3200EA7BA5 /* Snacks.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Snacks.json; sourceTree = "<group>"; };
+		B2CD221522E7B1E600EA7BA5 /* JSONWizard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONWizard.swift; sourceTree = "<group>"; };
+		B2CD221C22E7B74600EA7BA5 /* Dynamic Wizard Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dynamic Wizard Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2CD221E22E7B74600EA7BA5 /* Dynamic_Wizard_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic_Wizard_Tests.swift; sourceTree = "<group>"; };
+		B2CD222022E7B74600EA7BA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,13 +65,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B2CD221922E7B74600EA7BA5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B2BF1BE322E7BF15005535C4 /* Screen Templates */ = {
+			isa = PBXGroup;
+			children = (
+				B2BF1BEA22E7BF7F005535C4 /* Coordinator.swift */,
+				B2BF1BE422E7BF3A005535C4 /* TwoButtonViewController.swift */,
+				B2BF1BE522E7BF3A005535C4 /* TwoButtonViewController.xib */,
+				B2BF1BE822E7BF4E005535C4 /* TwoButtonCoordinator.swift */,
+			);
+			path = "Screen Templates";
+			sourceTree = "<group>";
+		};
 		B2CD21EA22E7AD5600EA7BA5 = {
 			isa = PBXGroup;
 			children = (
 				B2CD21F522E7AD5600EA7BA5 /* Dynamic Wizard */,
+				B2CD221D22E7B74600EA7BA5 /* Dynamic Wizard Tests */,
 				B2CD21F422E7AD5600EA7BA5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				B2CD21F322E7AD5600EA7BA5 /* Dynamic Wizard.app */,
+				B2CD221C22E7B74600EA7BA5 /* Dynamic Wizard Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -54,6 +107,10 @@
 		B2CD21F522E7AD5600EA7BA5 /* Dynamic Wizard */ = {
 			isa = PBXGroup;
 			children = (
+				B2BF1BE322E7BF15005535C4 /* Screen Templates */,
+				B2CD221222E7ADF500EA7BA5 /* Resources */,
+				B2CD221122E7ADDC00EA7BA5 /* JSON Wizard */,
+				B2CD220A22E7ADB400EA7BA5 /* Wizard */,
 				B2CD21F622E7AD5600EA7BA5 /* AppDelegate.swift */,
 				B2CD21F822E7AD5600EA7BA5 /* ViewController.swift */,
 				B2CD21FA22E7AD5600EA7BA5 /* Main.storyboard */,
@@ -62,6 +119,41 @@
 				B2CD220222E7AD5700EA7BA5 /* Info.plist */,
 			);
 			path = "Dynamic Wizard";
+			sourceTree = "<group>";
+		};
+		B2CD220A22E7ADB400EA7BA5 /* Wizard */ = {
+			isa = PBXGroup;
+			children = (
+				B2CD220B22E7ADB400EA7BA5 /* WizardError.swift */,
+				B2CD220C22E7ADB400EA7BA5 /* Wizard.swift */,
+				B2CD220D22E7ADB400EA7BA5 /* ScreenNavigation.swift */,
+			);
+			path = Wizard;
+			sourceTree = "<group>";
+		};
+		B2CD221122E7ADDC00EA7BA5 /* JSON Wizard */ = {
+			isa = PBXGroup;
+			children = (
+				B2CD221522E7B1E600EA7BA5 /* JSONWizard.swift */,
+			);
+			path = "JSON Wizard";
+			sourceTree = "<group>";
+		};
+		B2CD221222E7ADF500EA7BA5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B2CD221322E7AE3200EA7BA5 /* Snacks.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B2CD221D22E7B74600EA7BA5 /* Dynamic Wizard Tests */ = {
+			isa = PBXGroup;
+			children = (
+				B2CD221E22E7B74600EA7BA5 /* Dynamic_Wizard_Tests.swift */,
+				B2CD222022E7B74600EA7BA5 /* Info.plist */,
+			);
+			path = "Dynamic Wizard Tests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,6 +176,24 @@
 			productReference = B2CD21F322E7AD5600EA7BA5 /* Dynamic Wizard.app */;
 			productType = "com.apple.product-type.application";
 		};
+		B2CD221B22E7B74600EA7BA5 /* Dynamic Wizard Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2CD222322E7B74600EA7BA5 /* Build configuration list for PBXNativeTarget "Dynamic Wizard Tests" */;
+			buildPhases = (
+				B2CD221822E7B74600EA7BA5 /* Sources */,
+				B2CD221922E7B74600EA7BA5 /* Frameworks */,
+				B2CD221A22E7B74600EA7BA5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B2CD222222E7B74600EA7BA5 /* PBXTargetDependency */,
+			);
+			name = "Dynamic Wizard Tests";
+			productName = "Dynamic Wizard Tests";
+			productReference = B2CD221C22E7B74600EA7BA5 /* Dynamic Wizard Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -96,6 +206,10 @@
 				TargetAttributes = {
 					B2CD21F222E7AD5600EA7BA5 = {
 						CreatedOnToolsVersion = 10.3;
+					};
+					B2CD221B22E7B74600EA7BA5 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = B2CD21F222E7AD5600EA7BA5;
 					};
 				};
 			};
@@ -113,6 +227,7 @@
 			projectRoot = "";
 			targets = (
 				B2CD21F222E7AD5600EA7BA5 /* Dynamic Wizard */,
+				B2CD221B22E7B74600EA7BA5 /* Dynamic Wizard Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -124,7 +239,17 @@
 			files = (
 				B2CD220122E7AD5700EA7BA5 /* LaunchScreen.storyboard in Resources */,
 				B2CD21FE22E7AD5700EA7BA5 /* Assets.xcassets in Resources */,
+				B2BF1BE722E7BF3A005535C4 /* TwoButtonViewController.xib in Resources */,
+				B2CD221422E7AE3200EA7BA5 /* Snacks.json in Resources */,
 				B2CD21FC22E7AD5600EA7BA5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2CD221A22E7B74600EA7BA5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2CD222622E7B74C00EA7BA5 /* Snacks.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,12 +260,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2CD220F22E7ADB500EA7BA5 /* Wizard.swift in Sources */,
+				B2CD220E22E7ADB500EA7BA5 /* WizardError.swift in Sources */,
+				B2CD221622E7B1E600EA7BA5 /* JSONWizard.swift in Sources */,
+				B2BF1BE622E7BF3A005535C4 /* TwoButtonViewController.swift in Sources */,
+				B2CD221022E7ADB500EA7BA5 /* ScreenNavigation.swift in Sources */,
 				B2CD21F922E7AD5600EA7BA5 /* ViewController.swift in Sources */,
 				B2CD21F722E7AD5600EA7BA5 /* AppDelegate.swift in Sources */,
+				B2BF1BE922E7BF4E005535C4 /* TwoButtonCoordinator.swift in Sources */,
+				B2BF1BEB22E7BF7F005535C4 /* Coordinator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2CD221822E7B74600EA7BA5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2CD221F22E7B74600EA7BA5 /* Dynamic_Wizard_Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B2CD222222E7B74600EA7BA5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B2CD21F222E7AD5600EA7BA5 /* Dynamic Wizard */;
+			targetProxy = B2CD222122E7B74600EA7BA5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B2CD21FA22E7AD5600EA7BA5 /* Main.storyboard */ = {
@@ -314,6 +462,46 @@
 			};
 			name = Release;
 		};
+		B2CD222422E7B74600EA7BA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ML6WQ5R2QK;
+				INFOPLIST_FILE = "Dynamic Wizard Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.inteweave.Dynamic-Wizard-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dynamic Wizard.app/Dynamic Wizard";
+			};
+			name = Debug;
+		};
+		B2CD222522E7B74600EA7BA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ML6WQ5R2QK;
+				INFOPLIST_FILE = "Dynamic Wizard Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.inteweave.Dynamic-Wizard-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dynamic Wizard.app/Dynamic Wizard";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -331,6 +519,15 @@
 			buildConfigurations = (
 				B2CD220622E7AD5700EA7BA5 /* Debug */,
 				B2CD220722E7AD5700EA7BA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B2CD222322E7B74600EA7BA5 /* Build configuration list for PBXNativeTarget "Dynamic Wizard Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2CD222422E7B74600EA7BA5 /* Debug */,
+				B2CD222522E7B74600EA7BA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
