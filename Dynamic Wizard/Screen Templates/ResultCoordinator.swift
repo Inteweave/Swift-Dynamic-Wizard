@@ -8,6 +8,9 @@
 
 import UIKit
 
+///
+/// Coordinator for the **ResultViewController**
+///
 class ResultCoordinator: EventCoordinator {
     let navigationController: UINavigationController
     let screenContents: [String: String]

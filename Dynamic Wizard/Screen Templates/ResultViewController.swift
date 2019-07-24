@@ -17,6 +17,11 @@ protocol ResultViewControllerDelegate: AnyObject {
     func finishPressed()
 }
 
+///
+/// A view controller with a description and a finish button
+///
+/// Raises the **finish** event
+///
 class ResultViewController: UIViewController {
 
     @IBOutlet weak var label: UILabel!

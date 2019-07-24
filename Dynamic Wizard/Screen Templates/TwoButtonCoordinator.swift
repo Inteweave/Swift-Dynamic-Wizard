@@ -8,13 +8,9 @@
 
 import UIKit
 
-protocol EventDelegate: AnyObject {
-    ///
-    /// Raise the user event
-    ///
-    func onEvent(_ event: String)
-}
-
+///
+/// Coordinator for the 2 button template screen
+///
 class TwoButtonCoordinator: EventCoordinator {
     let navigationController: UINavigationController
     let screenContents: [String: String]

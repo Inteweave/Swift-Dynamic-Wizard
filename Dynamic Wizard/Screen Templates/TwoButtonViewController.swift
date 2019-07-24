@@ -23,6 +23,8 @@ protocol TwoButtonViewControllerDelegate: AnyObject {
 ///
 /// A template view controller with a title and 2 buttons
 ///
+/// Raises the **button1** or **button2** event
+///
 class TwoButtonViewController: UIViewController {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var button1: UIButton!

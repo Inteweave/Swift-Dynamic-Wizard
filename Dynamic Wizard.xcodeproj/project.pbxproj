@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B21BDE2B22E86CE90095A1CC /* EventDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21BDE2A22E86CE90095A1CC /* EventDelegate.swift */; };
 		B2BF1BE622E7BF3A005535C4 /* TwoButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BF1BE422E7BF3A005535C4 /* TwoButtonViewController.swift */; };
 		B2BF1BE722E7BF3A005535C4 /* TwoButtonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2BF1BE522E7BF3A005535C4 /* TwoButtonViewController.xib */; };
 		B2BF1BE922E7BF4E005535C4 /* TwoButtonCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BF1BE822E7BF4E005535C4 /* TwoButtonCoordinator.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B21BDE2A22E86CE90095A1CC /* EventDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDelegate.swift; sourceTree = "<group>"; };
 		B2BF1BE422E7BF3A005535C4 /* TwoButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoButtonViewController.swift; sourceTree = "<group>"; };
 		B2BF1BE522E7BF3A005535C4 /* TwoButtonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TwoButtonViewController.xib; sourceTree = "<group>"; };
 		B2BF1BE822E7BF4E005535C4 /* TwoButtonCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoButtonCoordinator.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				B2BF1BF722E8649E005535C4 /* ResultViewController.swift */,
 				B2BF1BF822E8649E005535C4 /* ResultViewController.xib */,
 				B2BF1BFB22E8656C005535C4 /* ResultCoordinator.swift */,
+				B21BDE2A22E86CE90095A1CC /* EventDelegate.swift */,
 			);
 			path = "Screen Templates";
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				B2CD21F722E7AD5600EA7BA5 /* AppDelegate.swift in Sources */,
 				B2BF1BF022E85F80005535C4 /* SnacksWizardController.swift in Sources */,
 				B2BF1BE922E7BF4E005535C4 /* TwoButtonCoordinator.swift in Sources */,
+				B21BDE2B22E86CE90095A1CC /* EventDelegate.swift in Sources */,
 				B2BF1BF422E860E5005535C4 /* BackButtonEventDetector.swift in Sources */,
 				B2BF1BEB22E7BF7F005535C4 /* Coordinator.swift in Sources */,
 				B2BF1BFC22E8656C005535C4 /* ResultCoordinator.swift in Sources */,

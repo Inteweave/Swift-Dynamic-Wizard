@@ -8,6 +8,10 @@
 
 import UIKit
 
+///
+/// Controller for the snacks wizard
+/// Provides the wizard definition from a local JSON file
+///
 class SnacksWizardController: DidGoBackDelegate, EventDelegate  {
     let wizard: JSONWizard
     let factory: CoordinatorFactory
@@ -15,6 +19,11 @@ class SnacksWizardController: DidGoBackDelegate, EventDelegate  {
     let backButtonEventDetector = BackButtonEventDetector()
     var completion: (() -> Void)?
 
+    ///
+    /// Failable initialization
+    ///
+    /// - parameter navigationController: The navigation controller
+    ///
     init?(navigationController: UINavigationController) {
         if let url = Bundle.main.url(forResource: "Snacks", withExtension: "json"),
             let data = try? Data(contentsOf: url),
@@ -56,6 +65,10 @@ class SnacksWizardController: DidGoBackDelegate, EventDelegate  {
         }
     }
 
+    ///
+    /// Handle an event from a screen
+    ///
+    /// - parameter event: The event as defined by the screen
     func onEvent(_ event: String) {
         if event == "finish" {
             completion?()
@@ -64,7 +77,6 @@ class SnacksWizardController: DidGoBackDelegate, EventDelegate  {
             coordinator.start()
         }
     }
-
 
 }
 

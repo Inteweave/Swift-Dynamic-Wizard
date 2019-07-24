@@ -8,6 +8,9 @@
 
 import Foundation
 
+///
+/// A coordinator with support for setting an event delegate
+///
 protocol EventCoordinator: Coordinator {
     var eventDelegate: EventDelegate? { get set }
 }
