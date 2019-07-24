@@ -1,5 +1,5 @@
 //
-//  TwoButtonCoordinator.swift
+//  ResultCoordinator.swift
 //  Dynamic Wizard
 //
 //  Created by Warren Milward on 24/7/19.
@@ -8,14 +8,7 @@
 
 import UIKit
 
-protocol EventDelegate: AnyObject {
-    ///
-    /// Raise the user event
-    ///
-    func onEvent(_ event: String)
-}
-
-class TwoButtonCoordinator: EventCoordinator {
+class ResultCoordinator: EventCoordinator {
     let navigationController: UINavigationController
     let screenContents: [String: String]
     weak var delegate: EventDelegate?
@@ -39,12 +32,12 @@ class TwoButtonCoordinator: EventCoordinator {
         self.navigationController = navigationController
         screenContents = contents
     }
-    
+
     ///
     /// Display the view controller
     ///
     func start() {
-        let viewController = TwoButtonViewController()
+        let viewController = ResultViewController()
         viewController.delegate = self
         navigationController.pushViewController(viewController, animated: true)
     }
@@ -52,30 +45,14 @@ class TwoButtonCoordinator: EventCoordinator {
 
 // MARK: - TwoButtonViewControllerDelegate
 
-extension TwoButtonCoordinator: TwoButtonViewControllerDelegate {
+extension ResultCoordinator: ResultViewControllerDelegate {
     var label: String {
         return screenContents["description"] ?? "Not defined in JSON"
     }
-
-    var button1Title: String {
-        return screenContents["button1"] ?? "Not defined in JSON"
-    }
-
-    var button2Title: String {
-        return screenContents["button2"] ?? "Not defined in JSON"
-    }
-
     ///
-    /// This screen raises the event **button1** when the user presses the button defined as button 1
+    /// This screen raises the event **finish** when the user presses the button defined as button 1
     ///
-    func button1Pressed() {
-        eventDelegate?.onEvent("button1")
-    }
-
-    ///
-    /// This screen raises the event **button2** when the user presses the button defined as button 1
-    ///
-    func button2Pressed() {
-        eventDelegate?.onEvent("button2")
+    func finishPressed() {
+        eventDelegate?.onEvent("finish")
     }
 }

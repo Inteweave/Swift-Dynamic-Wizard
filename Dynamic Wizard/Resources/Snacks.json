@@ -11,6 +11,7 @@
 		{
 			"id": "ice cream",
 			"template": "two-button",
+            "description": "Select Ice Cream Serve",
 			"button1": "Cone",
 			"button2": "Soft Serve"
 		},

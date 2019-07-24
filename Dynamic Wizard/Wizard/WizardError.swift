@@ -14,4 +14,5 @@ import Foundation
 enum WizardError<ScreenIdentifier>: Error {
     case multipleDefinitionsForScreen(identifier: ScreenIdentifier)
     case noEvent(_ eventName: String, foundForScreen: ScreenIdentifier)
+    case definitionError(_ error: String, screen: ScreenIdentifier)
 }
