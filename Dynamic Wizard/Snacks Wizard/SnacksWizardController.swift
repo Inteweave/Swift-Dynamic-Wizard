@@ -12,7 +12,7 @@ import UIKit
 /// Controller for the snacks wizard
 /// Provides the wizard definition from a local JSON file
 ///
-class SnacksWizardController: DidGoBackDelegate, EventDelegate  {
+class SnacksWizardController: DidGoBackDelegate, EventDelegate {
     let wizard: JSONWizard
     let factory: CoordinatorFactory
     var coordinators = [Coordinator]()
@@ -72,14 +72,11 @@ class SnacksWizardController: DidGoBackDelegate, EventDelegate  {
     func onEvent(_ event: String) {
         if event == "finish" {
             completion?()
-        } else if let screenIdentifier = try? wizard.onEvent(event: event), let coordinator = try? factory.coordinatorForScreen(screenIdentifier) {
+        } else if let screenIdentifier = try? wizard.onEvent(event: event),
+            let coordinator = try? factory.coordinatorForScreen(screenIdentifier) {
             coordinators.append(coordinator)
             coordinator.start()
         }
     }
 
 }
-
-
-
-

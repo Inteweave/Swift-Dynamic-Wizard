@@ -38,7 +38,7 @@ class JSONWizard: Wizard<String, String> {
     /// - parameter withContents: The Data from the JSON file
     /// - returns: the created wizard or nil on error
     ///
-    init?(withContents contents: Data)  {
+    init?(withContents contents: Data) {
         let decoder = JSONDecoder()
         if let definition = try? decoder.decode(WizardContents.self, from: contents) {
             var navigation = [Navigation]()

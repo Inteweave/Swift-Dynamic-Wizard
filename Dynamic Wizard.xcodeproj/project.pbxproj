@@ -29,7 +29,7 @@
 		B2CD221022E7ADB500EA7BA5 /* ScreenNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CD220D22E7ADB400EA7BA5 /* ScreenNavigation.swift */; };
 		B2CD221422E7AE3200EA7BA5 /* Snacks.json in Resources */ = {isa = PBXBuildFile; fileRef = B2CD221322E7AE3200EA7BA5 /* Snacks.json */; };
 		B2CD221622E7B1E600EA7BA5 /* JSONWizard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CD221522E7B1E600EA7BA5 /* JSONWizard.swift */; };
-		B2CD221F22E7B74600EA7BA5 /* Dynamic_Wizard_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CD221E22E7B74600EA7BA5 /* Dynamic_Wizard_Tests.swift */; };
+		B2CD221F22E7B74600EA7BA5 /* DynamicWizardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CD221E22E7B74600EA7BA5 /* DynamicWizardTests.swift */; };
 		B2CD222622E7B74C00EA7BA5 /* Snacks.json in Resources */ = {isa = PBXBuildFile; fileRef = B2CD221322E7AE3200EA7BA5 /* Snacks.json */; };
 /* End PBXBuildFile section */
 
@@ -69,7 +69,7 @@
 		B2CD221322E7AE3200EA7BA5 /* Snacks.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Snacks.json; sourceTree = "<group>"; };
 		B2CD221522E7B1E600EA7BA5 /* JSONWizard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONWizard.swift; sourceTree = "<group>"; };
 		B2CD221C22E7B74600EA7BA5 /* Dynamic Wizard Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dynamic Wizard Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B2CD221E22E7B74600EA7BA5 /* Dynamic_Wizard_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic_Wizard_Tests.swift; sourceTree = "<group>"; };
+		B2CD221E22E7B74600EA7BA5 /* DynamicWizardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicWizardTests.swift; sourceTree = "<group>"; };
 		B2CD222022E7B74600EA7BA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -182,7 +182,7 @@
 		B2CD221D22E7B74600EA7BA5 /* Dynamic Wizard Tests */ = {
 			isa = PBXGroup;
 			children = (
-				B2CD221E22E7B74600EA7BA5 /* Dynamic_Wizard_Tests.swift */,
+				B2CD221E22E7B74600EA7BA5 /* DynamicWizardTests.swift */,
 				B2CD222022E7B74600EA7BA5 /* Info.plist */,
 			);
 			path = "Dynamic Wizard Tests";
@@ -316,7 +316,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2CD221F22E7B74600EA7BA5 /* Dynamic_Wizard_Tests.swift in Sources */,
+				B2CD221F22E7B74600EA7BA5 /* DynamicWizardTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 ///
 /// Delegate for the view
 ///

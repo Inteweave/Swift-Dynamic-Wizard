@@ -54,7 +54,7 @@ class Wizard<ScreenIdentifier: Equatable, WizardEvent: Equatable> {
     /// Used when the wizard has gone back a screen
     ///
     func back() {
-        if let screenIdentifier = screenStack.popLast()  {
+        if let screenIdentifier = screenStack.popLast() {
             currentScreen = screenIdentifier
         }
     }

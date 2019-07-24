@@ -17,14 +17,12 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
     @IBAction func onStartWizard(_ sender: Any) {
         controller = SnacksWizardController(navigationController: navigationController!)
-        controller!.startWizard() {
+        controller!.startWizard {
             self.navigationController?.popToRootViewController(animated: true)
             self.controller = nil
         }
 
     }
 }
-

@@ -15,7 +15,6 @@ protocol DidGoBackDelegate: AnyObject {
     func backButtonPressed()
 }
 
-
 ///
 /// Class to detect when a view controller is popped from the navigation controller stack.
 ///
@@ -25,7 +24,9 @@ protocol DidGoBackDelegate: AnyObject {
 class BackButtonEventDetector: NSObject, UINavigationControllerDelegate {
     weak var delegate: DidGoBackDelegate?
     var viewControllersSeen = [UIViewController]()
-    func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
+    func navigationController(_ navigationController: UINavigationController,
+                              didShow viewController: UIViewController,
+                              animated: Bool) {
         if viewController === navigationController.viewControllers[0] {
             // we have exited the wizard; back to the home page.
             delegate?.backButtonPressed()

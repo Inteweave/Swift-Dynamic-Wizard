@@ -36,7 +36,9 @@ class CoordinatorFactory {
     func coordinatorForScreen(_ screenIdentifier: String) throws -> Coordinator {
         if let contents = wizard.screens[screenIdentifier] {
             if let templateName = contents["template"] {
-                let coordinator = try coordinatorForTemplate(templateName, screenIdentifier: screenIdentifier, screenContents: contents)
+                let coordinator = try coordinatorForTemplate(templateName,
+                                                             screenIdentifier: screenIdentifier,
+                                                             screenContents: contents)
                 coordinator.eventDelegate = delegate
                 return coordinator
             } else {
@@ -55,7 +57,9 @@ class CoordinatorFactory {
     /// - returns: The coordinator
     /// - throws: A *WizardError*
     ///
-    private func coordinatorForTemplate(_ templateName: String, screenIdentifier: String, screenContents: [String: String]) throws -> EventCoordinator {
+    private func coordinatorForTemplate(_ templateName: String,
+                                        screenIdentifier: String,
+                                        screenContents: [String: String]) throws -> EventCoordinator {
         switch templateName {
         case "two-button":
             return TwoButtonCoordinator(navigationController: navigationController, contents: screenContents)

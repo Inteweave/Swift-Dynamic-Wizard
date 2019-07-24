@@ -35,7 +35,7 @@ class TwoButtonCoordinator: EventCoordinator {
         self.navigationController = navigationController
         screenContents = contents
     }
-    
+
     ///
     /// Display the view controller
     ///

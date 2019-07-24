@@ -9,7 +9,7 @@
 import XCTest
 @testable import Dynamic_Wizard
 
-class Dynamic_Wizard_Tests: XCTestCase {
+class DynamicWizardTests: XCTestCase {
 
     //
     // Test that the data structures match the JSON for Codable decoding
