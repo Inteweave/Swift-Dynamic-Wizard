@@ -71,7 +71,7 @@
 		},
 		{
 			"on": "soft serve",
-			"when": "button1",
+			"when": "button2",
 			"to": "sprinkles" 
 		}
 	]
