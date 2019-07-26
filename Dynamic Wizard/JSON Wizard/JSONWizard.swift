@@ -17,20 +17,7 @@ typealias ScreenDefinition = [String: String]
 ///
 class JSONWizard: Wizard<String, String> {
     let screens: [String: ScreenDefinition]
-
-    ///
-    /// The contents of the JSON file
-    ///
-    private struct WizardContents: Codable {
-        let start: String
-        let screens: [[String: String]]
-        let navigation: [Navigation]
-        struct Navigation: Codable {
-            let on: String
-            let when: String
-            let to: String
-        }
-    }
+    let startScreen: String
 
     ///
     /// Create a wizard from the contents of a JSON file.
@@ -40,21 +27,24 @@ class JSONWizard: Wizard<String, String> {
     ///
     init?(withContents contents: Data) {
         let decoder = JSONDecoder()
-        if let definition = try? decoder.decode(WizardContents.self, from: contents) {
+        if let definition = try? decoder.decode(WizardModel.self, from: contents) {
             var navigation = [Navigation]()
             for nav in definition.navigation {
-                navigation.append(Navigation(from: nav.on, event: nav.when, to: nav.to))
+                navigation.append(Navigation(onScreen: nav.onScreen,
+                                             when: nav.when,
+                                             navigateTo: nav.navigateTo))
             }
 
             var screenDict = [String: ScreenDefinition]()
             for screenDefinition in definition.screens {
-                if let id = screenDefinition["id"] {
-                    screenDict[id] = screenDefinition
+                if let screenId = screenDefinition["id"] {
+                    screenDict[screenId] = screenDefinition
                 }
             }
             self.screens = screenDict
+            self.startScreen = definition.start
 
-            super.init(screenNavigations: navigation, startScreen: definition.start)
+            super.init(screenNavigations: navigation)
         } else {
             return nil
         }

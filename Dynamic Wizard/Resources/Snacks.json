@@ -12,13 +12,13 @@
 			"id": "ice cream",
 			"template": "two-button",
             "description": "Select Ice Cream Serve",
-			"button1": "Cone",
+			"button1": "Scoop",
 			"button2": "Soft Serve"
 		},
 		{
 			"id": "cone",
 			"template": "result",
-			"description": "Ice Cream Cone Selected"
+			"description": "Ice Cream Scoop Selected"
 		},
 		{
 			"id": "soft serve",
@@ -44,35 +44,11 @@
 		}
 	],
 	"navigation": [
-		{
-			"on": "select snack",
-			"when": "button1",
-			"to": "ice cream"
-		},
-		{
-			"on": "select snack",
-			"when": "button2",
-			"to": "nuts"
-		},
-		{
-			"on": "ice cream",
-			"when": "button1",
-			"to": "cone"
-		},
-		{
-			"on": "ice cream",
-			"when": "button2",
-			"to": "soft serve" 
-		},
-		{
-			"on": "soft serve",
-			"when": "button1",
-			"to": "choc dip" 
-		},
-		{
-			"on": "soft serve",
-			"when": "button2",
-			"to": "sprinkles" 
-		}
+		{ "onScreen": "select snack", "when": "button1", "navigateTo": "ice cream" },
+		{ "onScreen": "select snack", "when": "button2", "navigateTo": "nuts" },
+		{ "onScreen": "ice cream", "when": "button1", "navigateTo": "cone" },
+		{ "onScreen": "ice cream", "when": "button2", "navigateTo": "soft serve" },
+		{ "onScreen": "soft serve", "when": "button1", "navigateTo": "choc dip" },
+		{ "onScreen": "soft serve", "when": "button2", "navigateTo": "sprinkles" }
 	]
 }

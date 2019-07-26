@@ -8,17 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		B21BDE2B22E86CE90095A1CC /* EventDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21BDE2A22E86CE90095A1CC /* EventDelegate.swift */; };
+		B263EABC22EA77E2004A0CF6 /* WizardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B263EABB22EA77E2004A0CF6 /* WizardModel.swift */; };
 		B2BF1BE622E7BF3A005535C4 /* TwoButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BF1BE422E7BF3A005535C4 /* TwoButtonViewController.swift */; };
 		B2BF1BE722E7BF3A005535C4 /* TwoButtonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2BF1BE522E7BF3A005535C4 /* TwoButtonViewController.xib */; };
-		B2BF1BE922E7BF4E005535C4 /* TwoButtonCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BF1BE822E7BF4E005535C4 /* TwoButtonCoordinator.swift */; };
-		B2BF1BEB22E7BF7F005535C4 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BF1BEA22E7BF7F005535C4 /* Coordinator.swift */; };
-		B2BF1BEE22E85C27005535C4 /* CoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BF1BED22E85C27005535C4 /* CoordinatorFactory.swift */; };
+		B2BF1BE922E7BF4E005535C4 /* TwoButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BF1BE822E7BF4E005535C4 /* TwoButtonViewModel.swift */; };
+		B2BF1BEE22E85C27005535C4 /* ViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BF1BED22E85C27005535C4 /* ViewFactory.swift */; };
 		B2BF1BF022E85F80005535C4 /* SnacksWizardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BF1BEF22E85F80005535C4 /* SnacksWizardController.swift */; };
-		B2BF1BF422E860E5005535C4 /* BackButtonEventDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BF1BF322E860E5005535C4 /* BackButtonEventDetector.swift */; };
-		B2BF1BF622E86189005535C4 /* EventCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BF1BF522E86189005535C4 /* EventCoordinator.swift */; };
 		B2BF1BF922E8649E005535C4 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BF1BF722E8649E005535C4 /* ResultViewController.swift */; };
 		B2BF1BFA22E8649E005535C4 /* ResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2BF1BF822E8649E005535C4 /* ResultViewController.xib */; };
-		B2BF1BFC22E8656C005535C4 /* ResultCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BF1BFB22E8656C005535C4 /* ResultCoordinator.swift */; };
+		B2BF1BFC22E8656C005535C4 /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BF1BFB22E8656C005535C4 /* ResultViewModel.swift */; };
 		B2CD21F722E7AD5600EA7BA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CD21F622E7AD5600EA7BA5 /* AppDelegate.swift */; };
 		B2CD21F922E7AD5600EA7BA5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CD21F822E7AD5600EA7BA5 /* ViewController.swift */; };
 		B2CD21FC22E7AD5600EA7BA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2CD21FA22E7AD5600EA7BA5 /* Main.storyboard */; };
@@ -45,18 +43,16 @@
 
 /* Begin PBXFileReference section */
 		B21BDE2A22E86CE90095A1CC /* EventDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDelegate.swift; sourceTree = "<group>"; };
+		B263EABB22EA77E2004A0CF6 /* WizardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WizardModel.swift; sourceTree = "<group>"; };
 		B26F67FE22E97D3900699710 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		B2BF1BE422E7BF3A005535C4 /* TwoButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoButtonViewController.swift; sourceTree = "<group>"; };
 		B2BF1BE522E7BF3A005535C4 /* TwoButtonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TwoButtonViewController.xib; sourceTree = "<group>"; };
-		B2BF1BE822E7BF4E005535C4 /* TwoButtonCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoButtonCoordinator.swift; sourceTree = "<group>"; };
-		B2BF1BEA22E7BF7F005535C4 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		B2BF1BED22E85C27005535C4 /* CoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFactory.swift; sourceTree = "<group>"; };
+		B2BF1BE822E7BF4E005535C4 /* TwoButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoButtonViewModel.swift; sourceTree = "<group>"; };
+		B2BF1BED22E85C27005535C4 /* ViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFactory.swift; sourceTree = "<group>"; };
 		B2BF1BEF22E85F80005535C4 /* SnacksWizardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnacksWizardController.swift; sourceTree = "<group>"; };
-		B2BF1BF322E860E5005535C4 /* BackButtonEventDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackButtonEventDetector.swift; sourceTree = "<group>"; };
-		B2BF1BF522E86189005535C4 /* EventCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCoordinator.swift; sourceTree = "<group>"; };
 		B2BF1BF722E8649E005535C4 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		B2BF1BF822E8649E005535C4 /* ResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultViewController.xib; sourceTree = "<group>"; };
-		B2BF1BFB22E8656C005535C4 /* ResultCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCoordinator.swift; sourceTree = "<group>"; };
+		B2BF1BFB22E8656C005535C4 /* ResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewModel.swift; sourceTree = "<group>"; };
 		B2CD21F322E7AD5600EA7BA5 /* Dynamic Wizard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dynamic Wizard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2CD21F622E7AD5600EA7BA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2CD21F822E7AD5600EA7BA5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -95,14 +91,12 @@
 		B2BF1BE322E7BF15005535C4 /* Screen Templates */ = {
 			isa = PBXGroup;
 			children = (
-				B2BF1BEA22E7BF7F005535C4 /* Coordinator.swift */,
-				B2BF1BF522E86189005535C4 /* EventCoordinator.swift */,
 				B2BF1BE422E7BF3A005535C4 /* TwoButtonViewController.swift */,
 				B2BF1BE522E7BF3A005535C4 /* TwoButtonViewController.xib */,
-				B2BF1BE822E7BF4E005535C4 /* TwoButtonCoordinator.swift */,
+				B2BF1BE822E7BF4E005535C4 /* TwoButtonViewModel.swift */,
 				B2BF1BF722E8649E005535C4 /* ResultViewController.swift */,
 				B2BF1BF822E8649E005535C4 /* ResultViewController.xib */,
-				B2BF1BFB22E8656C005535C4 /* ResultCoordinator.swift */,
+				B2BF1BFB22E8656C005535C4 /* ResultViewModel.swift */,
 				B21BDE2A22E86CE90095A1CC /* EventDelegate.swift */,
 			);
 			path = "Screen Templates";
@@ -111,10 +105,9 @@
 		B2BF1BEC22E85BF9005535C4 /* Snacks Wizard */ = {
 			isa = PBXGroup;
 			children = (
-				B2BF1BED22E85C27005535C4 /* CoordinatorFactory.swift */,
+				B2BF1BED22E85C27005535C4 /* ViewFactory.swift */,
 				B2BF1BEF22E85F80005535C4 /* SnacksWizardController.swift */,
 				B26F67FE22E97D3900699710 /* README.md */,
-				B2BF1BF322E860E5005535C4 /* BackButtonEventDetector.swift */,
 			);
 			path = "Snacks Wizard";
 			sourceTree = "<group>";
@@ -169,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				B2CD221522E7B1E600EA7BA5 /* JSONWizard.swift */,
+				B263EABB22EA77E2004A0CF6 /* WizardModel.swift */,
 			);
 			path = "JSON Wizard";
 			sourceTree = "<group>";
@@ -302,15 +296,13 @@
 				B2BF1BE622E7BF3A005535C4 /* TwoButtonViewController.swift in Sources */,
 				B2CD221022E7ADB500EA7BA5 /* ScreenNavigation.swift in Sources */,
 				B2CD21F922E7AD5600EA7BA5 /* ViewController.swift in Sources */,
-				B2BF1BF622E86189005535C4 /* EventCoordinator.swift in Sources */,
 				B2CD21F722E7AD5600EA7BA5 /* AppDelegate.swift in Sources */,
 				B2BF1BF022E85F80005535C4 /* SnacksWizardController.swift in Sources */,
-				B2BF1BE922E7BF4E005535C4 /* TwoButtonCoordinator.swift in Sources */,
+				B2BF1BE922E7BF4E005535C4 /* TwoButtonViewModel.swift in Sources */,
+				B263EABC22EA77E2004A0CF6 /* WizardModel.swift in Sources */,
 				B21BDE2B22E86CE90095A1CC /* EventDelegate.swift in Sources */,
-				B2BF1BF422E860E5005535C4 /* BackButtonEventDetector.swift in Sources */,
-				B2BF1BEB22E7BF7F005535C4 /* Coordinator.swift in Sources */,
-				B2BF1BFC22E8656C005535C4 /* ResultCoordinator.swift in Sources */,
-				B2BF1BEE22E85C27005535C4 /* CoordinatorFactory.swift in Sources */,
+				B2BF1BFC22E8656C005535C4 /* ResultViewModel.swift in Sources */,
+				B2BF1BEE22E85C27005535C4 /* ViewFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

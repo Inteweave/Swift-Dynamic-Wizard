@@ -12,11 +12,10 @@ import UIKit
 /// Controller for the snacks wizard
 /// Provides the wizard definition from a local JSON file
 ///
-class SnacksWizardController: DidGoBackDelegate, EventDelegate {
+class SnacksWizardController: EventDelegate {
     let wizard: JSONWizard
-    let factory: CoordinatorFactory
-    var coordinators = [Coordinator]()
-    let backButtonEventDetector = BackButtonEventDetector()
+    let factory: ViewFactory
+    let navigationController: UINavigationController
     var completion: (() -> Void)?
 
     ///
@@ -29,9 +28,9 @@ class SnacksWizardController: DidGoBackDelegate, EventDelegate {
             let data = try? Data(contentsOf: url),
             let wizard = JSONWizard(withContents: data) {
             self.wizard = wizard
-            factory = CoordinatorFactory(wizard: wizard, navigationController: navigationController)
-            backButtonEventDetector.delegate = self
-            navigationController.delegate = backButtonEventDetector
+            self.navigationController = navigationController
+            factory = ViewFactory(wizard: wizard)
+            factory.eventDelegate = self
         } else {
             return nil
         }
@@ -44,24 +43,8 @@ class SnacksWizardController: DidGoBackDelegate, EventDelegate {
     ///
     func startWizard(completion: @escaping () -> Void) {
         self.completion = completion
-        factory.delegate = self
-        if let coordinator = try? factory.coordinatorForScreen(wizard.currentScreen) {
-            coordinators.append(coordinator)
-            coordinator.start()
-        }
-    }
-
-    ///
-    /// The user has pressed the back button. This event is not controlled by the wizard.
-    /// Tell the wizard that it needs to pop a screen so that its current screen remains correct.
-    /// Remove the last coordinator, or complete the wizard if it is the initial screen of the wizard
-    ///
-    func backButtonPressed() {
-        wizard.back()
-        if coordinators.count == 1 {
-            completion?()
-        } else {
-            coordinators.removeLast(1)
+        if let viewController = try? factory.viewControllerForScreen(wizard.startScreen) {
+            navigationController.pushViewController(viewController, animated: true)
         }
     }
 
@@ -69,13 +52,13 @@ class SnacksWizardController: DidGoBackDelegate, EventDelegate {
     /// Handle an event from a screen
     ///
     /// - parameter event: The event as defined by the screen
-    func onEvent(_ event: String) {
+    ///
+    func event(_ event: String, wasRaisedOnScreen screen: String) {
         if event == "finish" {
             completion?()
-        } else if let screenIdentifier = try? wizard.onEvent(event: event),
-            let coordinator = try? factory.coordinatorForScreen(screenIdentifier) {
-            coordinators.append(coordinator)
-            coordinator.start()
+        } else if let screenIdentifier = try? wizard.event(event: event, wasRaisedOnScreen: screen),
+            let viewController = try? factory.viewControllerForScreen(screenIdentifier) {
+            navigationController.pushViewController(viewController, animated: true)
         }
     }
 

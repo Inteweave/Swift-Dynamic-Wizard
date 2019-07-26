@@ -9,14 +9,6 @@
 import UIKit
 
 ///
-/// Delegate for the view
-///
-protocol ResultViewControllerDelegate: AnyObject {
-    var label: String { get }
-    func finishPressed()
-}
-
-///
 /// A view controller with a description and a finish button
 ///
 /// Raises the **finish** event
@@ -24,14 +16,31 @@ protocol ResultViewControllerDelegate: AnyObject {
 class ResultViewController: UIViewController {
 
     @IBOutlet weak var label: UILabel!
-    weak var delegate: ResultViewControllerDelegate?
+    var viewModel: ResultViewModel?
+
+    ///
+    /// Initialise ourselves creating the view model
+    ///
+    /// - parameter screen: the screen identifier
+    /// - parameter contents: the screen contents for the view model
+    /// - parameter eventDelegate: The delegate to call when events are to be raised
+    ///
+    init(screen: String, contents: [String: String], eventDelegate: EventDelegate?) {
+        viewModel = ResultViewModel(screen: screen, contents: contents)
+        viewModel!.eventDelegate = eventDelegate
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-       label.text = delegate?.label
+        label.text = viewModel?.label
     }
 
     @IBAction func onResult(_ sender: Any) {
-        delegate?.finishPressed()
+        viewModel?.finishPressed()
     }
 }

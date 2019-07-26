@@ -12,5 +12,5 @@ protocol EventDelegate: AnyObject {
     ///
     /// Raise the user event
     ///
-    func onEvent(_ event: String)
+    func event(_ event: String, wasRaisedOnScreen: String)
 }

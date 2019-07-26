@@ -1,5 +1,5 @@
 //
-//  TwoButtonCoordinator.swift
+//  TwoButtonViewModel.swift
 //  Dynamic Wizard
 //
 //  Created by Warren Milward on 24/7/19.
@@ -11,44 +11,27 @@ import UIKit
 ///
 /// Coordinator for the 2 button template screen
 ///
-class TwoButtonCoordinator: EventCoordinator {
-    let navigationController: UINavigationController
+class TwoButtonViewModel {
     let screenContents: [String: String]
-    weak var delegate: EventDelegate?
-    var eventDelegate: EventDelegate? {
-        get {
-            return delegate
-        }
-        set {
-            delegate = newValue
-        }
-    }
+    let screen: String
+    weak var eventDelegate: EventDelegate?
 
     ///
-    /// Returns a newly created coordinator initialised for the specified screen
+    /// Returns a newly created model initialised for the specified screen
     ///
     /// - parameter navigationController: The navigation controller that will display the screen
     /// - parameter screen: The *ScreenName* of the screen to display
-    /// - returns: The newly created coordinator
+    /// - returns: The newly created model
     ///
-    init(navigationController: UINavigationController, contents: [String: String]) {
-        self.navigationController = navigationController
+    init(screen: String, contents: [String: String]) {
+        self.screen = screen
         screenContents = contents
-    }
-
-    ///
-    /// Display the view controller
-    ///
-    func start() {
-        let viewController = TwoButtonViewController()
-        viewController.delegate = self
-        navigationController.pushViewController(viewController, animated: true)
     }
 }
 
-// MARK: - TwoButtonViewControllerDelegate
+// MARK: - Screen content
 
-extension TwoButtonCoordinator: TwoButtonViewControllerDelegate {
+extension TwoButtonViewModel {
     var label: String {
         return screenContents["description"] ?? "Not defined in JSON"
     }
@@ -65,13 +48,13 @@ extension TwoButtonCoordinator: TwoButtonViewControllerDelegate {
     /// This screen raises the event **button1** when the user presses the button defined as button 1
     ///
     func button1Pressed() {
-        eventDelegate?.onEvent("button1")
+        eventDelegate?.event("button1", wasRaisedOnScreen: screen)
     }
 
     ///
     /// This screen raises the event **button2** when the user presses the button defined as button 1
     ///
     func button2Pressed() {
-        eventDelegate?.onEvent("button2")
+        eventDelegate?.event("button2", wasRaisedOnScreen: screen)
     }
 }
